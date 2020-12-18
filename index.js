@@ -9,10 +9,8 @@ const fileDownload = require("js-file-download");
 const SYTRAN_URL = "https://sytran-backend.herokuapp.com/";
 
 function isFileExist(path) {
-  const v = process.argv.verbose;
   try {
     if (fs.existsSync(path)) {
-      if (v) console.log("file found");
       return true;
     } else {
       return false;
@@ -142,8 +140,4 @@ yargs(hideBin(process.argv))
       }
     }
   )
-  .option("verbose", {
-    alias: "v",
-    type: "boolean",
-    description: "Run with verbose logging",
-  }).argv;
+  .argv;
