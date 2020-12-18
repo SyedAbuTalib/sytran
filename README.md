@@ -19,3 +19,7 @@ Pulling a file from the server: `sytran pull asdf` (will keep the original name 
 Currently the server is limited to 10 megabytes per file. It is hosted on Heroku, which uses an ephermeral disk method, meaning files will be automatially deleted in 24 hours.
 
 Files are PUBLIC! Do not place sensitive data into the server. This means that anyone can run `sytran pull asdf`.
+
+## Related
+
+Code for the server is at https://github.com/SyedAbuTalib/sytran-backend.
