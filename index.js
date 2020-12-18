@@ -25,7 +25,11 @@ function getFileName(url) {
 }
 
 async function downloadFile(fileUrl) {
-  outputLocationPath = process.env.PWD;
+  if(process.env.PWD) {
+    outputLocationPath = process.env.PWD;
+  } else {
+    outputLocationPath = process.cwd();
+  }
   const writer = fs.createWriteStream(
     outputLocationPath + "/" + getFileName(fileUrl)
   );
